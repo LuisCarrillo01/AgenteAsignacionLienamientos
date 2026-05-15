@@ -18,7 +18,9 @@ export interface ClassificationResponse {
 }
 
 // Cambia la URL según dónde corra tu backend
-const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? "").replace(/\/$/, "");
+const API_BASE_URL = (
+  import.meta.env.VITE_API_BASE_URL ?? "https://agenteasignacionlienamientos.onrender.com"
+).replace(/\/$/, "");
 const API_URL = `${API_BASE_URL}/clasificar`;
 
 export async function clasificarDocumento(
