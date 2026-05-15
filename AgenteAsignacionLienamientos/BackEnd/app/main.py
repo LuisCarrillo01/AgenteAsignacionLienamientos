@@ -13,12 +13,21 @@ from app.core.config import get_settings
 
 
 settings = get_settings()
+ALWAYS_ALLOWED_ORIGINS = [
+    "https://agente-asignacion-lineamientos.vercel.app",
+]
 
 
 def create_app() -> Flask:
     app = Flask(__name__)
     app.config["APP_NAME"] = settings.app_name
-    CORS(app, origins=settings.cors_origins)
+    allowed_origins = list(dict.fromkeys([*settings.cors_origins, *ALWAYS_ALLOWED_ORIGINS]))
+    CORS(
+        app,
+        resources={r"/*": {"origins": allowed_origins}},
+        methods=["GET", "POST", "OPTIONS"],
+        allow_headers=["Content-Type"],
+    )
     app.register_blueprint(router)
     return app
 
