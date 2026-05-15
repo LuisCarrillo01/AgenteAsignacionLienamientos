@@ -48,19 +48,22 @@ class LLMService:
             "response_format": {"type": "json_object"},
         }
 
-        async with httpx.AsyncClient(timeout=self.settings.llm_timeout) as client:
-            response = await client.post(
-                f"{self.settings.llm_base_url.rstrip('/')}/chat/completions",
-                headers={
-                    "Authorization": f"Bearer {self.settings.llm_api_key}",
-                    "Content-Type": "application/json",
-                },
-                json=payload,
-            )
-            response.raise_for_status()
-            data = response.json()
+        try:
+            async with httpx.AsyncClient(timeout=self.settings.llm_timeout) as client:
+                response = await client.post(
+                    f"{self.settings.llm_base_url.rstrip('/')}/chat/completions",
+                    headers={
+                        "Authorization": f"Bearer {self.settings.llm_api_key}",
+                        "Content-Type": "application/json",
+                    },
+                    json=payload,
+                )
+                response.raise_for_status()
+                data = response.json()
+        except (httpx.HTTPError, ValueError, KeyError):
+            return self._fallback(candidates)
 
-        content = data["choices"][0]["message"]["content"]
+        content = data.get("choices", [{}])[0].get("message", {}).get("content", "")
         try:
             parsed = json.loads(content)
         except json.JSONDecodeError:
