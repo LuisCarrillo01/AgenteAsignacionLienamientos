@@ -1,0 +1,481 @@
+{
+  "fuente": {
+    "archivo": "anexo_c.pdf",
+    "titulo": "ANEXO C - Áreas de conocimiento, líneas de investigación y su alineamiento a las capacidades estratégicas del Comando Conjunto de las FF.AA."
+  },
+  "catalogos": {
+    "capacidades_estrategicas": [
+      "Vigilancia, reconocimiento e inteligencia",
+      "Maniobra",
+      "Mando y control",
+      "Ciberdefensa",
+      "Despliegue y Movilidad",
+      "Supervivencia y protección",
+      "Sostenimiento logístico"
+    ],
+    "areas_conocimiento": [
+      "Sistema aeronáutico",
+      "Armamento y munición",
+      "Ciberespacio",
+      "Sistema espacial",
+      "Modelamiento y Simulación",
+      "Sistemas de navegación, información, comunicación, redes e ingeniería de software",
+      "Sensores y sistemas optrónicos",
+      "Automatización y robótica",
+      "Ingeniería, construcción, repotenciación y ciclo de vida de sistemas terrestre, naval y aéreo",
+      "Sanidad militar, biotecnología y cibernética",
+      "Ingeniería civil y militar, ciencias geoespaciales, recursos hídricos, ciencias ambientales y ciencias del mar"
+    ],
+    "lineas_investigacion": [
+      "Sistemas aéreos no tripulados (UAS)",
+      "Productos aeronáuticos (ala fija, ala rotatoria)",
+      "Municiones de pequeño, mediano, grueso calibre y anti blindaje",
+      "Fusiles, lanza-granadas",
+      "Material energético y espoletas",
+      "Minas anti blindados y sistemas de demolición (explosivos)",
+      "Armamento no letal",
+      "Sistemas de combate basados en inteligencia artificial",
+      "Armas químicas biológicas y sistemas de protección",
+      "Misiles, cohetes, torpedos, cañones y artillería naval",
+      "Sistemas de lanzamiento y guiado inteligente para armamento aéreo y antiaéreo",
+      "Ciberdefensa (ciberarmas, diseño operacional, hacking, hardening y juegos de guerra)",
+      "Ciberseguridad (user behavior analytics, modelos de simulación en el ciberespacio, tecnologías de operación (OT) e internet de las cosas (IoT))",
+      "Ciberinteligencia (machine learning, minería de datos, inteligencia artificial)",
+      "Criptografía",
+      "Vehículos, sistemas y productos aeronáuticos de aplicación espacial (vehículos espaciales, satélites, cargas útiles, estaciones terrenas y cohetería)",
+      "Simuladores realidad virtual y aumentada",
+      "Simulador de sensores (radares de navegación, radares de control de tiro, sonar, electro-ópticos, sistemas de navegación inercial)",
+      "Simulador de armamento (cañones, misiles, torpedos)",
+      "Sistemas de simulación de vuelo, entrenamiento y vigilancia aérea",
+      "Geo posicionamiento para navegación terrestre, marítima y aérea (GPS e inercial)",
+      "Microelectrónica, nano electrónica, circuitos embebidos",
+      "Sistemas de navegación inercial",
+      "Redes de nueva generación",
+      "Seguridad en las comunicaciones",
+      "Sistemas de mando y control",
+      "Vehículos no tripulados terrestres",
+      "Inteligencia artificial para analítica de datos",
+      "Sensores electro ópticos, infrarrojos, láser, radio frecuencia, acústicos y cuánticos",
+      "Sensores de radar",
+      "Radares de navegación, radares de control de tiro, sonar, electro-ópticos",
+      "Sensores de radar para defensa aérea",
+      "Robótica terrestre, automatización, control y mecatrónica de medios terrestres",
+      "Robótica, automatización, control y mecatrónica de medios navales, vehículos submarinos y de superficie no tripulados para misiones de defensa",
+      "Automatización del movimiento de armas y sensores",
+      "Interfaces hombre máquina para sistemas de control de armas",
+      "Interfaces de interconexión para sistemas de armas y sensor",
+      "Inteligencia artificial aplicada a sistemas aeronáuticos",
+      "Construcción y repotenciación de material bélico, terrestre, naval, fluvial y aéreo",
+      "Blindajes, metales, cerámicos y fibras",
+      "Materiales compuestos",
+      "Medicina táctica y tropical",
+      "Medicina hiperbárica y subacuática",
+      "Medicina aeroespacial",
+      "Biomecánica y biomimética",
+      "Biomateriales",
+      "Edificaciones inteligentes eficientes para bases y campamentos"
+    ]
+  },
+  "relaciones": [
+    {
+      "pagina": 53,
+      "capacidades_estrategicas": [
+        "Vigilancia, reconocimiento e inteligencia"
+      ],
+      "area_conocimiento": "Sistema aeronáutico",
+      "linea_investigacion": "Sistemas aéreos no tripulados (UAS)"
+    },
+    {
+      "pagina": 53,
+      "capacidades_estrategicas": [
+        "Vigilancia, reconocimiento e inteligencia"
+      ],
+      "area_conocimiento": "Sistema aeronáutico",
+      "linea_investigacion": "Productos aeronáuticos (ala fija, ala rotatoria)"
+    },
+    {
+      "pagina": 53,
+      "capacidades_estrategicas": [
+        "Maniobra"
+      ],
+      "area_conocimiento": "Armamento y munición",
+      "linea_investigacion": "Municiones de pequeño, mediano, grueso calibre y anti blindaje"
+    },
+    {
+      "pagina": 53,
+      "capacidades_estrategicas": [
+        "Maniobra"
+      ],
+      "area_conocimiento": "Armamento y munición",
+      "linea_investigacion": "Fusiles, lanza-granadas"
+    },
+    {
+      "pagina": 53,
+      "capacidades_estrategicas": [
+        "Maniobra"
+      ],
+      "area_conocimiento": "Armamento y munición",
+      "linea_investigacion": "Material energético y espoletas"
+    },
+    {
+      "pagina": 53,
+      "capacidades_estrategicas": [
+        "Maniobra"
+      ],
+      "area_conocimiento": "Armamento y munición",
+      "linea_investigacion": "Minas anti blindados y sistemas de demolición (explosivos)"
+    },
+    {
+      "pagina": 53,
+      "capacidades_estrategicas": [
+        "Maniobra"
+      ],
+      "area_conocimiento": "Armamento y munición",
+      "linea_investigacion": "Armamento no letal"
+    },
+    {
+      "pagina": 53,
+      "capacidades_estrategicas": [
+        "Maniobra"
+      ],
+      "area_conocimiento": "Armamento y munición",
+      "linea_investigacion": "Sistemas de combate basados en inteligencia artificial"
+    },
+    {
+      "pagina": 53,
+      "capacidades_estrategicas": [
+        "Maniobra"
+      ],
+      "area_conocimiento": "Armamento y munición",
+      "linea_investigacion": "Armas químicas biológicas y sistemas de protección"
+    },
+    {
+      "pagina": 53,
+      "capacidades_estrategicas": [
+        "Maniobra"
+      ],
+      "area_conocimiento": "Armamento y munición",
+      "linea_investigacion": "Misiles, cohetes, torpedos, cañones y artillería naval"
+    },
+    {
+      "pagina": 53,
+      "capacidades_estrategicas": [
+        "Mando y control",
+        "Maniobra"
+      ],
+      "area_conocimiento": "Armamento y munición",
+      "linea_investigacion": "Sistemas de lanzamiento y guiado inteligente para armamento aéreo y antiaéreo"
+    },
+    {
+      "pagina": 53,
+      "capacidades_estrategicas": [
+        "Mando y control",
+        "Maniobra"
+      ],
+      "area_conocimiento": "Ciberespacio",
+      "linea_investigacion": "Ciberdefensa (ciberarmas, diseño operacional, hacking, hardening y juegos de guerra)"
+    },
+    {
+      "pagina": 53,
+      "capacidades_estrategicas": [
+        "Mando y control",
+        "Maniobra"
+      ],
+      "area_conocimiento": "Ciberespacio",
+      "linea_investigacion": "Ciberseguridad (user behavior analytics, modelos de simulación en el ciberespacio, tecnologías de operación (OT) e internet de las cosas (IoT))"
+    },
+    {
+      "pagina": 53,
+      "capacidades_estrategicas": [
+        "Mando y control",
+        "Vigilancia, reconocimiento e inteligencia",
+        "Maniobra"
+      ],
+      "area_conocimiento": "Ciberespacio",
+      "linea_investigacion": "Ciberinteligencia (machine learning, minería de datos, inteligencia artificial)"
+    },
+    {
+      "pagina": 53,
+      "capacidades_estrategicas": [
+        "Mando y control",
+        "Maniobra"
+      ],
+      "area_conocimiento": "Ciberespacio",
+      "linea_investigacion": "Criptografía"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Mando y control",
+        "Vigilancia, reconocimiento e inteligencia",
+        "Ciberdefensa",
+        "Maniobra"
+      ],
+      "area_conocimiento": "Sistema espacial",
+      "linea_investigacion": "Vehículos, sistemas y productos aeronáuticos de aplicación espacial (vehículos espaciales, satélites, cargas útiles, estaciones terrenas y cohetería)"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Maniobra"
+      ],
+      "area_conocimiento": "Modelamiento y Simulación",
+      "linea_investigacion": "Simuladores realidad virtual y aumentada"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Maniobra"
+      ],
+      "area_conocimiento": "Modelamiento y Simulación",
+      "linea_investigacion": "Simulador de sensores (radares de navegación, radares de control de tiro, sonar, electro-ópticos, sistemas de navegación inercial)"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Maniobra"
+      ],
+      "area_conocimiento": "Modelamiento y Simulación",
+      "linea_investigacion": "Simulador de armamento (cañones, misiles, torpedos)"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Maniobra"
+      ],
+      "area_conocimiento": "Modelamiento y Simulación",
+      "linea_investigacion": "Sistemas de simulación de vuelo, entrenamiento y vigilancia aérea"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Mando y control"
+      ],
+      "area_conocimiento": "Sistemas de navegación, información, comunicación, redes e ingeniería de software",
+      "linea_investigacion": "Geo posicionamiento para navegación terrestre, marítima y aérea (GPS e inercial)"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Sostenimiento logístico"
+      ],
+      "area_conocimiento": "Sistemas de navegación, información, comunicación, redes e ingeniería de software",
+      "linea_investigacion": "Microelectrónica, nano electrónica, circuitos embebidos"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Mando y control"
+      ],
+      "area_conocimiento": "Sistemas de navegación, información, comunicación, redes e ingeniería de software",
+      "linea_investigacion": "Sistemas de navegación inercial"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Mando y control"
+      ],
+      "area_conocimiento": "Sistemas de navegación, información, comunicación, redes e ingeniería de software",
+      "linea_investigacion": "Redes de nueva generación"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Ciberdefensa"
+      ],
+      "area_conocimiento": "Sistemas de navegación, información, comunicación, redes e ingeniería de software",
+      "linea_investigacion": "Seguridad en las comunicaciones"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Mando y control",
+        "Despliegue y Movilidad"
+      ],
+      "area_conocimiento": "Sistemas de navegación, información, comunicación, redes e ingeniería de software",
+      "linea_investigacion": "Sistemas de mando y control"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Maniobra"
+      ],
+      "area_conocimiento": "Sistemas de navegación, información, comunicación, redes e ingeniería de software",
+      "linea_investigacion": "Vehículos no tripulados terrestres"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Vigilancia, reconocimiento e inteligencia"
+      ],
+      "area_conocimiento": "Sistemas de navegación, información, comunicación, redes e ingeniería de software",
+      "linea_investigacion": "Inteligencia artificial para analítica de datos"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Mando y control"
+      ],
+      "area_conocimiento": "Sensores y sistemas optrónicos",
+      "linea_investigacion": "Sensores electro ópticos, infrarrojos, láser, radio frecuencia, acústicos y cuánticos"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Mando y control"
+      ],
+      "area_conocimiento": "Sensores y sistemas optrónicos",
+      "linea_investigacion": "Sensores de radar"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Mando y control"
+      ],
+      "area_conocimiento": "Sensores y sistemas optrónicos",
+      "linea_investigacion": "Radares de navegación, radares de control de tiro, sonar, electro-ópticos"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Mando y control"
+      ],
+      "area_conocimiento": "Sensores y sistemas optrónicos",
+      "linea_investigacion": "Sensores de radar para defensa aérea"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Mando y control",
+        "Vigilancia, reconocimiento e inteligencia",
+        "Despliegue y Movilidad",
+        "Supervivencia y protección"
+      ],
+      "area_conocimiento": "Sensores y sistemas optrónicos",
+      "linea_investigacion": "Robótica terrestre, automatización, control y mecatrónica de medios terrestres"
+    },
+    {
+      "pagina": 54,
+      "capacidades_estrategicas": [
+        "Mando y control",
+        "Vigilancia, reconocimiento e inteligencia",
+        "Supervivencia y protección"
+      ],
+      "area_conocimiento": "Sensores y sistemas optrónicos",
+      "linea_investigacion": "Robótica, automatización, control y mecatrónica de medios navales, vehículos submarinos y de superficie no tripulados para misiones de defensa"
+    },
+    {
+      "pagina": 55,
+      "capacidades_estrategicas": [
+        "Mando y control",
+        "Vigilancia, reconocimiento e inteligencia",
+        "Supervivencia y protección"
+      ],
+      "area_conocimiento": "Automatización y robótica",
+      "linea_investigacion": "Automatización del movimiento de armas y sensores"
+    },
+    {
+      "pagina": 55,
+      "capacidades_estrategicas": [
+        "Mando y control",
+        "Vigilancia, reconocimiento e inteligencia",
+        "Supervivencia y protección"
+      ],
+      "area_conocimiento": "Automatización y robótica",
+      "linea_investigacion": "Interfaces hombre máquina para sistemas de control de armas"
+    },
+    {
+      "pagina": 55,
+      "capacidades_estrategicas": [
+        "Mando y control",
+        "Vigilancia, reconocimiento e inteligencia",
+        "Supervivencia y protección"
+      ],
+      "area_conocimiento": "Automatización y robótica",
+      "linea_investigacion": "Interfaces de interconexión para sistemas de armas y sensor"
+    },
+    {
+      "pagina": 55,
+      "capacidades_estrategicas": [
+        "Mando y control",
+        "Vigilancia, reconocimiento e inteligencia",
+        "Supervivencia y protección"
+      ],
+      "area_conocimiento": "Automatización y robótica",
+      "linea_investigacion": "Inteligencia artificial aplicada a sistemas aeronáuticos"
+    },
+    {
+      "pagina": 55,
+      "capacidades_estrategicas": [
+        "Sostenimiento logístico"
+      ],
+      "area_conocimiento": "Ingeniería, construcción, repotenciación y ciclo de vida de sistemas terrestre, naval y aéreo",
+      "linea_investigacion": "Construcción y repotenciación de material bélico, terrestre, naval, fluvial y aéreo"
+    },
+    {
+      "pagina": 55,
+      "capacidades_estrategicas": [
+        "Sostenimiento logístico",
+        "Maniobra"
+      ],
+      "area_conocimiento": "Ingeniería, construcción, repotenciación y ciclo de vida de sistemas terrestre, naval y aéreo",
+      "linea_investigacion": "Blindajes, metales, cerámicos y fibras"
+    },
+    {
+      "pagina": 55,
+      "capacidades_estrategicas": [
+        "Sostenimiento logístico"
+      ],
+      "area_conocimiento": "Ingeniería, construcción, repotenciación y ciclo de vida de sistemas terrestre, naval y aéreo",
+      "linea_investigacion": "Materiales compuestos"
+    },
+    {
+      "pagina": 55,
+      "capacidades_estrategicas": [
+        "Supervivencia y protección"
+      ],
+      "area_conocimiento": "Sanidad militar, biotecnología y cibernética",
+      "linea_investigacion": "Medicina táctica y tropical"
+    },
+    {
+      "pagina": 55,
+      "capacidades_estrategicas": [
+        "Supervivencia y protección"
+      ],
+      "area_conocimiento": "Sanidad militar, biotecnología y cibernética",
+      "linea_investigacion": "Medicina hiperbárica y subacuática"
+    },
+    {
+      "pagina": 55,
+      "capacidades_estrategicas": [
+        "Maniobra"
+      ],
+      "area_conocimiento": "Sanidad militar, biotecnología y cibernética",
+      "linea_investigacion": "Medicina aeroespacial"
+    },
+    {
+      "pagina": 55,
+      "capacidades_estrategicas": [
+        "Maniobra"
+      ],
+      "area_conocimiento": "Sanidad militar, biotecnología y cibernética",
+      "linea_investigacion": "Biomecánica y biomimética"
+    },
+    {
+      "pagina": 55,
+      "capacidades_estrategicas": [
+        "Supervivencia y protección"
+      ],
+      "area_conocimiento": "Ingeniería civil y militar, ciencias geoespaciales, recursos hídricos, ciencias ambientales y ciencias del mar",
+      "linea_investigacion": "Biomateriales"
+    },
+    {
+      "pagina": 55,
+      "capacidades_estrategicas": [
+        "Sostenimiento logístico"
+      ],
+      "area_conocimiento": "Ingeniería civil y militar, ciencias geoespaciales, recursos hídricos, ciencias ambientales y ciencias del mar",
+      "linea_investigacion": "Edificaciones inteligentes eficientes para bases y campamentos"
+    }
+  ]
+}
