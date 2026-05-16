@@ -64,8 +64,7 @@ function App() {
           </label>
           <label>
             Objetivo
-            <input
-              type="text"
+            <textarea
               value={objetivo}
               onChange={e => setObjetivo(e.target.value)}
               required

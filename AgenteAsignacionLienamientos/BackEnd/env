@@ -1,0 +1,15 @@
+APP_ENV=dev
+APP_HOST=0.0.0.0
+APP_PORT=8000
+
+LLM_PROVIDER=gemini
+LLM_TIMEOUT=60
+
+GEMINI_API_KEY=AIzaSyAZr-gXvO-U4Z3z211lJtdFdpzrZ17cD68
+GEMINI_MODEL=gemini-2.0-flash
+GEMINI_BASE_URL=https://generativelanguage.googleapis.com/v1beta
+
+# Proveedor legado compatible con OpenAI
+LLM_API_KEY=
+LLM_MODEL=gpt-4.1-mini
+LLM_BASE_URL=https://models.inference.ai.azure.com
