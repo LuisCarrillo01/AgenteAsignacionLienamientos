@@ -6,6 +6,28 @@
 http://127.0.0.1:8000
 ```
 
+## Configuracion LLM
+
+El backend usa `Gemini` como proveedor principal por defecto y conserva el proveedor legado compatible con OpenAI como alternativa.
+
+Variables recomendadas en `.env`:
+
+```env
+LLM_PROVIDER=gemini
+LLM_TIMEOUT=60
+
+GEMINI_API_KEY=tu_key_google_ai_studio
+GEMINI_MODEL=gemini-2.0-flash
+GEMINI_BASE_URL=https://generativelanguage.googleapis.com/v1beta
+
+# Proveedor legado opcional
+LLM_API_KEY=
+LLM_MODEL=gpt-4.1-mini
+LLM_BASE_URL=https://models.inference.ai.azure.com
+```
+
+Si `LLM_PROVIDER=gemini`, el backend consume la API nativa de Google AI Studio. Si la llamada falla o no hay clave configurada, el sistema mantiene el fallback local basado en puntajes del catalogo.
+
 ## Endpoint de salud
 
 ### GET `/health`
