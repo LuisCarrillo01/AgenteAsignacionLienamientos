@@ -17,6 +17,17 @@ class LLMService:
         evidence: list[str],
         candidates: list[dict[str, Any]],
     ) -> dict[str, Any]:
+        provider = (self.settings.llm_provider or "").strip().lower()
+        if provider == "gemini":
+            return await self._choose_with_gemini(consolidated_text, evidence, candidates)
+        return await self._choose_with_github(consolidated_text, evidence, candidates)
+
+    async def _choose_with_github(
+        self,
+        consolidated_text: str,
+        evidence: list[str],
+        candidates: list[dict[str, Any]],
+    ) -> dict[str, Any]:
         if not self.settings.llm_api_key:
             return self._fallback(candidates)
 
@@ -64,6 +75,68 @@ class LLMService:
             return self._fallback(candidates)
 
         content = data.get("choices", [{}])[0].get("message", {}).get("content", "")
+        try:
+            parsed = json.loads(content)
+        except json.JSONDecodeError:
+            return self._fallback(candidates)
+
+        return parsed
+
+    async def _choose_with_gemini(
+        self,
+        consolidated_text: str,
+        evidence: list[str],
+        candidates: list[dict[str, Any]],
+    ) -> dict[str, Any]:
+        if not self.settings.gemini_api_key:
+            return self._fallback(candidates)
+
+        prompt = {
+            "texto": consolidated_text,
+            "evidencia": evidence,
+            "candidatas": candidates,
+            "instruccion": (
+                "Selecciona 2 candidatas y marca 1 recomendada. La recomendada debe ser una de las 2 candidatas. "
+                "Responde solo JSON valido con las claves recomendada_index, candidata_indices, justificaciones y evidencia."
+            ),
+        }
+        payload = {
+            "contents": [
+                {
+                    "parts": [
+                        {
+                            "text": (
+                                "Eres un clasificador tecnico militar. Debes elegir exclusivamente entre las candidatas provistas. "
+                                "No inventes lineas, areas ni capacidades. Responde solo JSON valido.\n\n"
+                                f"{json.dumps(prompt, ensure_ascii=False)}"
+                            )
+                        }
+                    ]
+                }
+            ],
+            "generationConfig": {
+                "temperature": 0.1,
+                "responseMimeType": "application/json",
+            },
+        }
+
+        try:
+            async with httpx.AsyncClient(timeout=self.settings.llm_timeout) as client:
+                response = await client.post(
+                    f"{self.settings.gemini_base_url.rstrip('/')}/models/{self.settings.gemini_model}:generateContent",
+                    headers={"Content-Type": "application/json"},
+                    params={"key": self.settings.gemini_api_key},
+                    json=payload,
+                )
+                response.raise_for_status()
+                data = response.json()
+        except (httpx.HTTPError, ValueError, KeyError):
+            return self._fallback(candidates)
+
+        content = self._extract_gemini_content(data)
+        if not content:
+            return self._fallback(candidates)
+
         try:
             parsed = json.loads(content)
         except json.JSONDecodeError:
@@ -131,6 +204,16 @@ class LLMService:
             }
 
         return {}
+
+    def _extract_gemini_content(self, data: dict[str, Any]) -> str:
+        candidates = data.get("candidates", [])
+        if not candidates:
+            return ""
+
+        content = candidates[0].get("content", {})
+        parts = content.get("parts", [])
+        text_chunks = [part.get("text", "") for part in parts if isinstance(part, dict) and part.get("text")]
+        return "".join(text_chunks).strip()
 
     def _fallback(self, candidates: list[dict[str, Any]]) -> dict[str, Any]:
         return {

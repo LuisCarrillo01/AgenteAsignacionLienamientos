@@ -12,10 +12,13 @@ class Settings(BaseSettings):
     app_port: int = 8000
     log_level: str = "INFO"
 
-    llm_provider: str = "github"
+    llm_provider: str = "gemini"
     llm_base_url: str = "https://models.inference.ai.azure.com"
     llm_api_key: str = ""
     llm_model: str = "gpt-4.1-mini"
+    gemini_base_url: str = "https://generativelanguage.googleapis.com/v1beta"
+    gemini_api_key: str = ""
+    gemini_model: str = "gemini-2.0-flash"
     llm_timeout: int = 60
 
     classification_json_path: str = "./anexo_c_clasificacion.json"
