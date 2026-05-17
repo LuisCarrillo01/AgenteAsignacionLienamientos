@@ -22,7 +22,10 @@ class Settings(BaseSettings):
     llm_timeout: int = 60
 
     classification_json_path: str = "./anexo_c_clasificacion.json"
+    areas_lineas_json_path: str = "./areas_lineas.json"
+    lineas_capacidades_json_path: str = "./lineas_capacidades.json"
     top_k_candidates: int = 5
+    top_k_areas: int = 3
     final_candidates: int = 2
     min_confidence: float = 0.60
     cors_origins: Annotated[List[str], NoDecode] = Field(default_factory=lambda: ["*"])

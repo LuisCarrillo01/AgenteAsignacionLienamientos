@@ -1,0 +1,167 @@
+{
+  "Sistemas aéreos no tripulados (UAS)": [
+    "Vigilancia, reconocimiento e inteligencia"
+  ],
+  "Productos aeronáuticos (ala fija, ala rotatoria)": [
+    "Vigilancia, reconocimiento e inteligencia"
+  ],
+  "Municiones de pequeño, mediano, grueso calibre y anti blindaje": [
+    "Maniobra"
+  ],
+  "Fusiles, lanza-granadas": [
+    "Maniobra"
+  ],
+  "Material energético y espoletas": [
+    "Maniobra"
+  ],
+  "Minas anti blindados y sistemas de demolición (explosivos)": [
+    "Maniobra"
+  ],
+  "Armamento no letal": [
+    "Maniobra"
+  ],
+  "Sistemas de combate basados en inteligencia artificial": [
+    "Maniobra"
+  ],
+  "Armas químicas biológicas y sistemas de protección": [
+    "Maniobra"
+  ],
+  "Misiles, cohetes, torpedos, cañones y artillería naval": [
+    "Maniobra"
+  ],
+  "Sistemas de lanzamiento y guiado inteligente para armamento aéreo y antiaéreo": [
+    "Mando y control",
+    "Maniobra"
+  ],
+  "Ciberdefensa (ciberarmas, diseño operacional, hacking, hardening y juegos de guerra)": [
+    "Mando y control",
+    "Maniobra"
+  ],
+  "Ciberseguridad (user behavior analytics, modelos de simulación en el ciberespacio, tecnologías de operación (OT) e internet de las cosas (IoT))": [
+    "Mando y control",
+    "Maniobra"
+  ],
+  "Ciberinteligencia (machine learning, minería de datos, inteligencia artificial)": [
+    "Mando y control",
+    "Vigilancia, reconocimiento e inteligencia",
+    "Maniobra"
+  ],
+  "Criptografía": [
+    "Mando y control",
+    "Maniobra"
+  ],
+  "Vehículos, sistemas y productos aeronáuticos de aplicación espacial (vehículos espaciales, satélites, cargas útiles, estaciones terrenas y cohetería)": [
+    "Mando y control",
+    "Vigilancia, reconocimiento e inteligencia",
+    "Ciberdefensa",
+    "Maniobra"
+  ],
+  "Simuladores realidad virtual y aumentada": [
+    "Maniobra"
+  ],
+  "Simulador de sensores (radares de navegación, radares de control de tiro, sonar, electro-ópticos, sistemas de navegación inercial)": [
+    "Maniobra"
+  ],
+  "Simulador de armamento (cañones, misiles, torpedos)": [
+    "Maniobra"
+  ],
+  "Sistemas de simulación de vuelo, entrenamiento y vigilancia aérea": [
+    "Maniobra"
+  ],
+  "Geo posicionamiento para navegación terrestre, marítima y aérea (GPS e inercial)": [
+    "Mando y control"
+  ],
+  "Microelectrónica, nano electrónica, circuitos embebidos": [
+    "Sostenimiento logístico"
+  ],
+  "Sistemas de navegación inercial": [
+    "Mando y control"
+  ],
+  "Redes de nueva generación": [
+    "Mando y control"
+  ],
+  "Seguridad en las comunicaciones": [
+    "Ciberdefensa"
+  ],
+  "Sistemas de mando y control": [
+    "Mando y control",
+    "Despliegue y Movilidad"
+  ],
+  "Vehículos no tripulados terrestres": [
+    "Maniobra"
+  ],
+  "Inteligencia artificial para analítica de datos": [
+    "Vigilancia, reconocimiento e inteligencia"
+  ],
+  "Sensores electro ópticos, infrarrojos, láser, radio frecuencia, acústicos y cuánticos": [
+    "Mando y control"
+  ],
+  "Sensores de radar": [
+    "Mando y control"
+  ],
+  "Radares de navegación, radares de control de tiro, sonar, electro-ópticos": [
+    "Mando y control"
+  ],
+  "Sensores de radar para defensa aérea": [
+    "Mando y control"
+  ],
+  "Robótica terrestre, automatización, control y mecatrónica de medios terrestres": [
+    "Mando y control",
+    "Vigilancia, reconocimiento e inteligencia",
+    "Despliegue y Movilidad",
+    "Supervivencia y protección"
+  ],
+  "Robótica, automatización, control y mecatrónica de medios navales, vehículos submarinos y de superficie no tripulados para misiones de defensa": [
+    "Mando y control",
+    "Vigilancia, reconocimiento e inteligencia",
+    "Supervivencia y protección"
+  ],
+  "Automatización del movimiento de armas y sensores": [
+    "Mando y control",
+    "Vigilancia, reconocimiento e inteligencia",
+    "Supervivencia y protección"
+  ],
+  "Interfaces hombre máquina para sistemas de control de armas": [
+    "Mando y control",
+    "Vigilancia, reconocimiento e inteligencia",
+    "Supervivencia y protección"
+  ],
+  "Interfaces de interconexión para sistemas de armas y sensor": [
+    "Mando y control",
+    "Vigilancia, reconocimiento e inteligencia",
+    "Supervivencia y protección"
+  ],
+  "Inteligencia artificial aplicada a sistemas aeronáuticos": [
+    "Mando y control",
+    "Vigilancia, reconocimiento e inteligencia",
+    "Supervivencia y protección"
+  ],
+  "Construcción y repotenciación de material bélico, terrestre, naval, fluvial y aéreo": [
+    "Sostenimiento logístico"
+  ],
+  "Blindajes, metales, cerámicos y fibras": [
+    "Sostenimiento logístico",
+    "Maniobra"
+  ],
+  "Materiales compuestos": [
+    "Sostenimiento logístico"
+  ],
+  "Medicina táctica y tropical": [
+    "Supervivencia y protección"
+  ],
+  "Medicina hiperbárica y subacuática": [
+    "Supervivencia y protección"
+  ],
+  "Medicina aeroespacial": [
+    "Maniobra"
+  ],
+  "Biomecánica y biomimética": [
+    "Maniobra"
+  ],
+  "Biomateriales": [
+    "Supervivencia y protección"
+  ],
+  "Edificaciones inteligentes eficientes para bases y campamentos": [
+    "Sostenimiento logístico"
+  ]
+}

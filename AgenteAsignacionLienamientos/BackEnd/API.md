@@ -28,6 +28,14 @@ LLM_BASE_URL=https://models.inference.ai.azure.com
 
 Si `LLM_PROVIDER=gemini`, el backend consume la API nativa de Google AI Studio. Si la llamada falla o no hay clave configurada, el sistema mantiene el fallback local basado en puntajes del catalogo.
 
+## Flujo de clasificacion jerarquica
+
+El agente clasifica en **tres fases secuenciales** para evitar asignaciones incorrectas:
+
+1. **Fase 1 - Area de Conocimiento**: El sistema puntua todas las areas y el LLM elige la mas adecuada.
+2. **Fase 2 - Linea de Investigacion**: Solo se evaluan las lineas que pertenecen al area elegida. El LLM elige entre ellas.
+3. **Fase 3 - Capacidades Estrategicas**: Se obtienen automaticamente desde el catalogo (sin LLM) a partir de la linea elegida.
+
 ## Endpoint de salud
 
 ### GET `/health`
@@ -48,9 +56,9 @@ Verifica que la API este levantada.
 
 Clasifica un documento en:
 
-- linea de investigacion
 - area de conocimiento
-- capacidades estrategicas
+- linea de investigacion (dentro del area)
+- capacidades estrategicas (lookup automatico)
 
 ### Headers
 
@@ -80,8 +88,8 @@ Content-Type: application/json
       "Mando y control",
       "Maniobra"
     ],
-    "confianza": 0.99,
-    "justificacion": "Seleccion automatica basada en el mayor puntaje local del catalogo."
+    "confianza": 0.89,
+    "justificacion": "Area: ... | Linea: ..."
   },
   "candidatas": [
     {
@@ -91,23 +99,22 @@ Content-Type: application/json
         "Mando y control",
         "Maniobra"
       ],
-      "confianza": 0.99,
-      "justificacion": "Seleccion automatica basada en el mayor puntaje local del catalogo."
+      "confianza": 0.89,
+      "justificacion": "Area: ... | Linea: ..."
     },
     {
-      "linea_investigacion": "Ciberseguridad (user behavior analytics, modelos de simulación en el ciberespacio, tecnologías de operación (OT) e internet de las cosas (IoT))",
+      "linea_investigacion": "Ciberseguridad (user behavior analytics, modelos de simulación en el ciberespacio, ...)",
       "area_conocimiento": "Ciberespacio",
       "capacidades_estrategicas": [
         "Mando y control",
         "Maniobra"
       ],
-      "confianza": 0.8258,
-      "justificacion": "Seleccion automatica basada en el mayor puntaje local del catalogo."
+      "confianza": 0.78,
+      "justificacion": "Candidata alternativa dentro de la misma area de conocimiento."
     }
   ],
   "evidencia_detectada": [
     "ciberdefensa",
-    "proponer",
     "gestion",
     "arquitectura",
     "red",

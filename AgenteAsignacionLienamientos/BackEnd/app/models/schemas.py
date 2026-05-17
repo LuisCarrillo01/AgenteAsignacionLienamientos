@@ -36,3 +36,16 @@ class CatalogData(BaseModel):
     fuente: dict
     catalogos: dict
     relaciones: List[CatalogRelation]
+
+
+class ScoredArea(BaseModel):
+    area_conocimiento: str
+    score: float
+    matched_terms: List[str]
+
+
+class ScoredLinea(BaseModel):
+    linea_investigacion: str
+    area_conocimiento: str
+    score: float
+    matched_terms: List[str]
