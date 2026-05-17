@@ -1,0 +1,71 @@
+{
+  "Sistema aeronáutico": [
+    "Sistemas aéreos no tripulados (UAS)",
+    "Productos aeronáuticos (ala fija, ala rotatoria)"
+  ],
+  "Armamento y munición": [
+    "Municiones de pequeño, mediano, grueso calibre y anti blindaje",
+    "Fusiles, lanza-granadas",
+    "Material energético y espoletas",
+    "Minas anti blindados y sistemas de demolición (explosivos)",
+    "Armamento no letal",
+    "Sistemas de combate basados en inteligencia artificial",
+    "Armas químicas biológicas y sistemas de protección",
+    "Misiles, cohetes, torpedos, cañones y artillería naval",
+    "Sistemas de lanzamiento y guiado inteligente para armamento aéreo y antiaéreo"
+  ],
+  "Ciberespacio": [
+    "Ciberdefensa (ciberarmas, diseño operacional, hacking, hardening y juegos de guerra)",
+    "Ciberseguridad (user behavior analytics, modelos de simulación en el ciberespacio, tecnologías de operación (OT) e internet de las cosas (IoT))",
+    "Ciberinteligencia (machine learning, minería de datos, inteligencia artificial)",
+    "Criptografía"
+  ],
+  "Sistema espacial": [
+    "Vehículos, sistemas y productos aeronáuticos de aplicación espacial (vehículos espaciales, satélites, cargas útiles, estaciones terrenas y cohetería)"
+  ],
+  "Modelamiento y Simulación": [
+    "Simuladores realidad virtual y aumentada",
+    "Simulador de sensores (radares de navegación, radares de control de tiro, sonar, electro-ópticos, sistemas de navegación inercial)",
+    "Simulador de armamento (cañones, misiles, torpedos)",
+    "Sistemas de simulación de vuelo, entrenamiento y vigilancia aérea"
+  ],
+  "Sistemas de navegación, información, comunicación, redes e ingeniería de software": [
+    "Geo posicionamiento para navegación terrestre, marítima y aérea (GPS e inercial)",
+    "Microelectrónica, nano electrónica, circuitos embebidos",
+    "Sistemas de navegación inercial",
+    "Redes de nueva generación",
+    "Seguridad en las comunicaciones",
+    "Sistemas de mando y control",
+    "Vehículos no tripulados terrestres",
+    "Inteligencia artificial para analítica de datos"
+  ],
+  "Sensores y sistemas optrónicos": [
+    "Sensores electro ópticos, infrarrojos, láser, radio frecuencia, acústicos y cuánticos",
+    "Sensores de radar",
+    "Radares de navegación, radares de control de tiro, sonar, electro-ópticos",
+    "Sensores de radar para defensa aérea",
+    "Robótica terrestre, automatización, control y mecatrónica de medios terrestres",
+    "Robótica, automatización, control y mecatrónica de medios navales, vehículos submarinos y de superficie no tripulados para misiones de defensa"
+  ],
+  "Automatización y robótica": [
+    "Automatización del movimiento de armas y sensores",
+    "Interfaces hombre máquina para sistemas de control de armas",
+    "Interfaces de interconexión para sistemas de armas y sensor",
+    "Inteligencia artificial aplicada a sistemas aeronáuticos"
+  ],
+  "Ingeniería, construcción, repotenciación y ciclo de vida de sistemas terrestre, naval y aéreo": [
+    "Construcción y repotenciación de material bélico, terrestre, naval, fluvial y aéreo",
+    "Blindajes, metales, cerámicos y fibras",
+    "Materiales compuestos"
+  ],
+  "Sanidad militar, biotecnología y cibernética": [
+    "Medicina táctica y tropical",
+    "Medicina hiperbárica y subacuática",
+    "Medicina aeroespacial",
+    "Biomecánica y biomimética"
+  ],
+  "Ingeniería civil y militar, ciencias geoespaciales, recursos hídricos, ciencias ambientales y ciencias del mar": [
+    "Biomateriales",
+    "Edificaciones inteligentes eficientes para bases y campamentos"
+  ]
+}

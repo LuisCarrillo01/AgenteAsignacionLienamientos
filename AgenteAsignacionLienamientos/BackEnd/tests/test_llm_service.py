@@ -3,56 +3,39 @@ import asyncio
 from app.services.llm_service import LLMService
 
 
-def test_choose_candidates_uses_gemini_by_default(monkeypatch):
-    service = LLMService()
-    service.settings.llm_provider = "gemini"
-
-    async def fake_gemini(consolidated_text, evidence, candidates):
-        return {"provider": "gemini", "count": len(candidates)}
-
-    async def fake_github(consolidated_text, evidence, candidates):
-        return {"provider": "github"}
-
-    monkeypatch.setattr(service, "_choose_with_gemini", fake_gemini)
-    monkeypatch.setattr(service, "_choose_with_github", fake_github)
-
-    result = asyncio.run(service.choose_candidates("texto", ["e1"], [{"score": 0.9}]))
-
-    assert result == {"provider": "gemini", "count": 1}
-
-
-def test_choose_candidates_supports_legacy_github_provider(monkeypatch):
-    service = LLMService()
-    service.settings.llm_provider = "github"
-
-    async def fake_gemini(consolidated_text, evidence, candidates):
-        return {"provider": "gemini"}
-
-    async def fake_github(consolidated_text, evidence, candidates):
-        return {"provider": "github", "count": len(candidates)}
-
-    monkeypatch.setattr(service, "_choose_with_gemini", fake_gemini)
-    monkeypatch.setattr(service, "_choose_with_github", fake_github)
-
-    result = asyncio.run(service.choose_candidates("texto", ["e1"], [{"score": 0.9}, {"score": 0.8}]))
-
-    assert result == {"provider": "github", "count": 2}
-
-
-def test_gemini_fallback_without_api_key():
+def test_choose_area_fallback_without_api_key():
     service = LLMService()
     service.settings.gemini_api_key = ""
+    service.settings.llm_api_key = ""
 
     result = asyncio.run(
-        service._choose_with_gemini(
-            "texto",
+        service.choose_area(
+            "texto de prueba",
             ["e1"],
-            [{"score": 0.9}, {"score": 0.8}],
+            [{"area_conocimiento": "Ciberespacio", "score": 0.9, "matched_terms": ["ciber"]}],
         )
     )
 
-    assert result["recomendada_index"] == 0
-    assert result["candidata_indices"] == [0, 1]
+    # Sin API key debe devolver fallback con area_index 0
+    assert result["area_index"] == 0
+
+
+def test_choose_linea_fallback_without_api_key():
+    service = LLMService()
+    service.settings.gemini_api_key = ""
+    service.settings.llm_api_key = ""
+
+    result = asyncio.run(
+        service.choose_linea(
+            "texto de prueba",
+            ["e1"],
+            "Ciberespacio",
+            [{"linea_investigacion": "Ciberdefensa", "score": 0.9, "matched_terms": ["ciber"]}],
+        )
+    )
+
+    # Sin API key debe devolver fallback con linea_index 0
+    assert result["linea_index"] == 0
 
 
 def test_extract_gemini_content_reads_json_text():
@@ -64,7 +47,7 @@ def test_extract_gemini_content_reads_json_text():
                 {
                     "content": {
                         "parts": [
-                            {"text": '{"recomendada_index": 1}'},
+                            {"text": '{"area_index": 1}'},
                         ]
                     }
                 }
@@ -72,4 +55,4 @@ def test_extract_gemini_content_reads_json_text():
         }
     )
 
-    assert content == '{"recomendada_index": 1}'
+    assert content == '{"area_index": 1}'
