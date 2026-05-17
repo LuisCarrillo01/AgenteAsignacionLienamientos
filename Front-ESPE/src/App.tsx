@@ -52,66 +52,82 @@ function App() {
             <li>Sugerencia de capacidades estratégicas</li>
           </ul>
         </div>
-        <form className="ia-form" onSubmit={handleSubmit}>
-          <label>
-            Resumen / Introducción
-            <textarea
-              value={resumen}
-              onChange={e => setResumen(e.target.value)}
-              required
-              placeholder="Describe brevemente de qué trata el documento..."
-            />
-          </label>
-          <label>
-            Objetivo
-            <textarea
-              value={objetivo}
-              onChange={e => setObjetivo(e.target.value)}
-              required
-              placeholder="¿Qué se busca lograr?"
-            />
-          </label>
-          <label>
-            Alcance
-            <textarea
-              value={alcance}
-              onChange={e => setAlcance(e.target.value)}
-              required
-              placeholder="Describe el alcance..."
-            />
-          </label>
-          <label>
-            Propuesta
-            <textarea
-              value={propuesta}
-              onChange={e => setPropuesta(e.target.value)}
-              required
-              placeholder="¿Cuál es la solución o propuesta técnica?"
-            />
-          </label>
-          <button type="submit" disabled={loading}>
-            {loading ? 'Procesando...' : 'Generar'}
-          </button>
-        </form>
-        {error && <div className="error-message" style={{color: '#d32f2f', marginBottom: '20px'}}>⚠️ {error}</div>}
-
-        {resultados && resultados.recomendada && (
-          <div className="resultados-box">
-            <h2 style={{color: '#2e7d32'}}>✔ Clasificación Sugerida</h2>
-            <div><strong>Línea de Investigación:</strong> {resultados.recomendada.linea_investigacion}</div>
-            <div><strong>Área de Conocimiento:</strong> {resultados.recomendada.area_conocimiento}</div>
-            <div><strong>Capacidades Estratégicas:</strong> {resultados.recomendada.capacidades_estrategicas.join(', ')}</div>
-            <div><strong>Confianza:</strong> {(resultados.recomendada.confianza * 100).toFixed(1)}%</div>
-            <div style={{marginTop: '15px', padding: '10px', background: '#fff', borderRadius: '8px', border: '1px solid #e0e0e0'}}>
-              <strong>Justificación:</strong>
-              <p style={{fontSize: '0.95rem', fontStyle: 'italic', margin: '5px 0 0 0'}}>{resultados.recomendada.justificacion}</p>
-            </div>
+        <div className="main-content">
+          <div className="left-panel">
+            <form className="ia-form" onSubmit={handleSubmit}>
+              <label>
+                Resumen / Introducción
+                <textarea
+                  value={resumen}
+                  onChange={e => setResumen(e.target.value)}
+                  required
+                  placeholder="Describe brevemente de qué trata el documento..."
+                />
+              </label>
+              <label>
+                Objetivo
+                <textarea
+                  value={objetivo}
+                  onChange={e => setObjetivo(e.target.value)}
+                  required
+                  placeholder="¿Qué se busca lograr?"
+                />
+              </label>
+              <label>
+                Alcance
+                <textarea
+                  value={alcance}
+                  onChange={e => setAlcance(e.target.value)}
+                  required
+                  placeholder="Describe el alcance..."
+                />
+              </label>
+              <label>
+                Propuesta
+                <textarea
+                  value={propuesta}
+                  onChange={e => setPropuesta(e.target.value)}
+                  required
+                  placeholder="¿Cuál es la solución o propuesta técnica?"
+                />
+              </label>
+              <button type="submit" disabled={loading}>
+                {loading ? 'Procesando...' : 'Generar'}
+              </button>
+            </form>
+            {error && <div className="error-message" style={{color: '#d32f2f', marginBottom: '20px'}}>⚠️ {error}</div>}
           </div>
-        )}
+          <div className="right-panel">
+            {loading ? (
+              <div className="resultados-box" style={{textAlign: 'center', padding: '40px'}}>
+                <div style={{fontSize: '3rem', marginBottom: '20px'}}>🔄</div>
+                <h3 style={{color: '#1976d2', margin: '0 0 10px 0'}}>Procesando...</h3>
+                <p style={{color: '#666', margin: 0}}>Analizando tu documento con IA</p>
+              </div>
+            ) : resultados && resultados.recomendada ? (
+              <div className="resultados-box">
+                <h2 style={{color: '#2e7d32'}}>✔ Clasificación Sugerida</h2>
+                <div><strong>Línea de Investigación:</strong> {resultados.recomendada.linea_investigacion}</div>
+                <div><strong>Área de Conocimiento:</strong> {resultados.recomendada.area_conocimiento}</div>
+                <div><strong>Capacidades Estratégicas:</strong> {resultados.recomendada.capacidades_estrategicas.join(', ')}</div>
+                <div><strong>Confianza:</strong> {(resultados.recomendada.confianza * 100).toFixed(1)}%</div>
+                <div style={{marginTop: '15px', padding: '10px', background: '#fff', borderRadius: '8px', border: '1px solid #e0e0e0'}}>
+                  <strong>Justificación:</strong>
+                  <p style={{fontSize: '0.95rem', fontStyle: 'italic', margin: '5px 0 0 0'}}>{resultados.recomendada.justificacion}</p>
+                </div>
+              </div>
+            ) : (
+              <div className="resultados-box" style={{textAlign: 'center', padding: '50px 30px', background: 'linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%)', border: '2px dashed #d1d5db'}}>
+                <div style={{fontSize: '4rem', marginBottom: '24px'}}>📋</div>
+                <h3 style={{color: '#6b7280', margin: '0 0 12px 0', fontSize: '1.3rem', fontWeight: 600}}>Esperando datos</h3>
+                <p style={{color: '#9ca3af', margin: 0, fontSize: '1rem', lineHeight: 1.6}}>Completa el formulario y haz clic en "Generar" para ver los resultados aquí</p>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </>
   );
 }
 
 export default App;
-// ...existing code...
