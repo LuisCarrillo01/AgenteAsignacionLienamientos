@@ -101,21 +101,11 @@ function App() {
             <div><strong>Línea de Investigación:</strong> {resultados.recomendada.linea_investigacion}</div>
             <div><strong>Área de Conocimiento:</strong> {resultados.recomendada.area_conocimiento}</div>
             <div><strong>Capacidades Estratégicas:</strong> {resultados.recomendada.capacidades_estrategicas.join(', ')}</div>
+            <div><strong>Confianza:</strong> {(resultados.recomendada.confianza * 100).toFixed(1)}%</div>
             <div style={{marginTop: '15px', padding: '10px', background: '#fff', borderRadius: '8px', border: '1px solid #e0e0e0'}}>
               <strong>Justificación:</strong>
               <p style={{fontSize: '0.95rem', fontStyle: 'italic', margin: '5px 0 0 0'}}>{resultados.recomendada.justificacion}</p>
             </div>
-            {resultados.candidatas.length > 1 && (
-              <div style={{marginTop: '20px'}}>
-                <h3>Otras candidatas:</h3>
-                {resultados.candidatas.slice(1).map((candidata, index) => (
-                  <div key={index} style={{padding: '10px', background: '#f5f5f5', borderRadius: '8px', marginTop: '10px'}}>
-                    <div><strong>Línea:</strong> {candidata.linea_investigacion}</div>
-                    <div><strong>Confianza:</strong> {(candidata.confianza * 100).toFixed(1)}%</div>
-                  </div>
-                ))}
-              </div>
-            )}
           </div>
         )}
       </div>
